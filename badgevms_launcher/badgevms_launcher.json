@@ -2,7 +2,7 @@
     "unique_identifier": "badgevms_launcher",
     "name": "DutchVMS Launcher",
     "author": "CJ van Soest",
-    "version": "1.7.1",
+    "version": "1.9.0",
     "interpreter": "",
     "metadata_file": "",
     "binary_path": "cj_launcher.elf",
