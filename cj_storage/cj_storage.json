@@ -1,0 +1,10 @@
+{
+    "unique_identifier": "cj_storage",
+    "name": "Storage Monitor",
+    "author": "CJ van Soest",
+    "version": "1.0.2",
+    "interpreter": "",
+    "metadata_file": "",
+    "binary_path": "cj_storage.elf",
+    "source": 1
+}

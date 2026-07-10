@@ -1,0 +1,10 @@
+{
+    "unique_identifier": "cj_i2c_scan",
+    "name": "I2C Scanner",
+    "author": "CJ van Soest",
+    "version": "1.5.5",
+    "interpreter": "",
+    "metadata_file": "",
+    "binary_path": "cj_i2c_scan.elf",
+    "source": 1
+}
