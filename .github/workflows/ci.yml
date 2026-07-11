@@ -38,7 +38,16 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      # Branch protection requires status checks on every commit landing on
+      # main - the default GITHUB_TOKEN pushes as github-actions[bot], which
+      # isn't an admin and gets rejected ("2 of 2 required status checks are
+      # expected") since this freshly-created commit was never itself run
+      # through CI. BOT_PUSH_TOKEN is a PAT for the repo owner (an actual
+      # admin - enforce_admins is off), so its push bypasses the check
+      # requirement the same way a manual admin push would.
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BOT_PUSH_TOKEN }}
       - name: Regenerate index.json
         run: python3 scripts/generate_index.py
       - name: Commit if changed
