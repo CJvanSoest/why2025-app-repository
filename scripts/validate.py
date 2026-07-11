@@ -6,13 +6,21 @@ For every app directory (one per unique_identifier at the repo root) this checks
   - it contains every required manifest field with the right type,
   - the directory name matches the manifest's unique_identifier,
   - the referenced binary (binary_path) exists inside the app dir and is a
-    real ELF (0x7f 'E' 'L' 'F' magic).
+    real ELF (0x7f 'E' 'L' 'F' magic),
+  - 'name' (and 'description', if present) is ASCII/Latin text only.
+
+The English-text rule is enforced as an ASCII-charset check, not real
+language detection - it blocks non-Latin scripts (CJK, Cyrillic, Arabic,
+emoji spam) reliably, but it cannot tell English from e.g. Dutch since both
+use the same character set. Good enough as a first filter; a human reviewer
+still reads the PR.
 
 Exit code is non-zero if any app fails, so CI can gate merges on it.
 Run from the repo root: python3 scripts/validate.py
 """
 import json
 import os
+import re
 import sys
 
 # Reuse the exact app manifest schema used by every WHY app (apps/<name>/manifest.json).
@@ -26,6 +34,11 @@ REQUIRED_FIELDS = {
     "binary_path": str,
     "source": int,
 }
+
+# Fields that, if present, must be ASCII/Latin text (see module docstring for
+# what this rule does and does not guarantee).
+TEXT_FIELDS = ("name", "description")
+ASCII_TEXT_RE = re.compile(r"^[A-Za-z0-9 _\-.,!?()'\"/:&+#]*$")
 
 # Directories that are not apps.
 IGNORE_DIRS = {".git", ".github", "scripts"}
@@ -60,6 +73,15 @@ def validate_app(app_dir):
     uid = meta.get("unique_identifier")
     if uid is not None and uid != app:
         ok = fail(app, f"unique_identifier '{uid}' does not match directory name '{app}'")
+
+    for field in TEXT_FIELDS:
+        value = meta.get(field)
+        if isinstance(value, str) and value and not ASCII_TEXT_RE.match(value):
+            ok = fail(
+                app,
+                f"field '{field}' contains non-Latin characters ('{value}') - "
+                "store text must be English/ASCII",
+            )
 
     binary_path = meta.get("binary_path")
     if isinstance(binary_path, str) and binary_path:

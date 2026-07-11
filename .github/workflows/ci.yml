@@ -17,6 +17,19 @@ jobs:
       - name: Validate every app directory
         run: python3 scripts/validate.py
 
+  pr-scope:
+    name: One app per PR + no infra changes
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check PR only touches one app directory
+        run: |
+          git diff --name-only "${{ github.event.pull_request.base.sha }}" "${{ github.sha }}" \
+            | python3 scripts/check_pr_scope.py
+
   index:
     name: Regenerate index.json
     needs: validate
