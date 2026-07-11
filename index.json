@@ -79,7 +79,7 @@
       "unique_identifier": "cj_meshcore",
       "name": "MeshCore",
       "author": "CJ van Soest",
-      "version": "0.17.1",
+      "version": "0.19.4",
       "interpreter": "",
       "metadata_file": "",
       "binary_path": "cj_meshcore.elf",
