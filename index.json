@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "CJvanSoest/why2025-app-repository",
-  "app_count": 8,
+  "app_count": 10,
   "apps": [
     {
       "unique_identifier": "badgevms_launcher",
@@ -14,6 +14,18 @@
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/badgevms_launcher/badgevms_launcher.json",
       "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/badgevms_launcher/cj_launcher.elf"
+    },
+    {
+      "unique_identifier": "cj_files",
+      "name": "File Browser",
+      "author": "CJ van Soest",
+      "version": "1.0.0",
+      "interpreter": "",
+      "metadata_file": "",
+      "binary_path": "cj_files.elf",
+      "source": 1,
+      "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_files/cj_files.json",
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_files/cj_files.elf"
     },
     {
       "unique_identifier": "cj_hello",
@@ -38,6 +50,18 @@
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_i2c_scan/cj_i2c_scan.json",
       "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_i2c_scan/cj_i2c_scan.elf"
+    },
+    {
+      "unique_identifier": "cj_ledmatrix",
+      "name": "LED Matrix",
+      "author": "CJ van Soest",
+      "version": "1.1.0",
+      "interpreter": "",
+      "metadata_file": "",
+      "binary_path": "cj_ledmatrix.elf",
+      "source": 1,
+      "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/cj_ledmatrix.json",
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/cj_ledmatrix.elf"
     },
     {
       "unique_identifier": "cj_lora_info",
