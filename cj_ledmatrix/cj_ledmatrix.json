@@ -1,0 +1,10 @@
+{
+    "unique_identifier": "cj_ledmatrix",
+    "name": "LED Matrix",
+    "author": "CJ van Soest",
+    "version": "1.1.0",
+    "interpreter": "",
+    "metadata_file": "",
+    "binary_path": "cj_ledmatrix.elf",
+    "source": 1
+}
