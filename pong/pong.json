@@ -1,0 +1,10 @@
+{
+    "unique_identifier": "pong",
+    "name": "Pong (BadgeHub 2025)",
+    "author": "Felix Weber",
+    "version": "1",
+    "interpreter": "",
+    "metadata_file": "",
+    "binary_path": "pong.elf",
+    "source": 1
+}
