@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "CJvanSoest/why2025-app-repository",
-  "app_count": 12,
+  "app_count": 13,
   "apps": [
     {
       "unique_identifier": "badgevms_launcher",
@@ -146,6 +146,18 @@
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/pax_test/pax_test.json",
       "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/pax_test/pax_test.elf"
+    },
+    {
+      "unique_identifier": "pong",
+      "name": "Pong (BadgeHub 2025)",
+      "author": "Felix Weber",
+      "version": "1",
+      "interpreter": "",
+      "metadata_file": "",
+      "binary_path": "pong.elf",
+      "source": 1,
+      "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/pong/pong.json",
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/pong/pong.elf"
     }
   ]
 }
