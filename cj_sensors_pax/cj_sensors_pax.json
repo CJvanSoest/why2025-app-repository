@@ -1,0 +1,10 @@
+{
+    "unique_identifier": "cj_sensors_pax",
+    "name": "Sensors (PAX)",
+    "author": "CJ van Soest",
+    "version": "1.0.0",
+    "interpreter": "",
+    "metadata_file": "",
+    "binary_path": "cj_sensors_pax.elf",
+    "source": 1
+}
