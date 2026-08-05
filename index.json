@@ -103,7 +103,7 @@
       "unique_identifier": "cj_sensors_lvgl",
       "name": "Sensors (LVGL)",
       "author": "CJ van Soest",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "interpreter": "",
       "metadata_file": "",
       "binary_path": "cj_sensors_lvgl.elf",
