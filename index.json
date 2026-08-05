@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "CJvanSoest/why2025-app-repository",
-  "app_count": 13,
+  "app_count": 14,
   "apps": [
     {
       "unique_identifier": "badgevms_launcher",
@@ -98,6 +98,18 @@
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_sensors/cj_sensors.json",
       "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_sensors/cj_sensors.elf"
+    },
+    {
+      "unique_identifier": "cj_sensors_raw",
+      "name": "Sensors (Raw)",
+      "author": "CJ van Soest",
+      "version": "1.0.0",
+      "interpreter": "",
+      "metadata_file": "",
+      "binary_path": "cj_sensors_raw.elf",
+      "source": 1,
+      "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_sensors_raw/cj_sensors_raw.json",
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_sensors_raw/cj_sensors_raw.elf"
     },
     {
       "unique_identifier": "cj_storage",
