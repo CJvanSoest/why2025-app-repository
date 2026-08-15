@@ -61,7 +61,23 @@
       "binary_path": "cj_ledmatrix.elf",
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/cj_ledmatrix.json",
-      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/cj_ledmatrix.elf"
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/cj_ledmatrix.elf",
+      "tanmatsu": {
+        "name": "LED Matrix",
+        "version": "1.0.0",
+        "application": [
+          {
+            "targets": [
+              "why2025"
+            ],
+            "type": "appfs",
+            "executable": "whyledmatrix.bin",
+            "revision": 1,
+            "assets": []
+          }
+        ],
+        "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_ledmatrix/metadata.json"
+      }
     },
     {
       "unique_identifier": "cj_lora_info",
