@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "repository": "CJvanSoest/why2025-app-repository",
-  "app_count": 13,
+  "app_count": 14,
   "apps": [
     {
       "unique_identifier": "badgevms_launcher",
       "name": "DutchVMS Launcher",
       "author": "CJ van Soest",
-      "version": "1.18.1",
+      "version": "1.19.0",
       "interpreter": "",
       "metadata_file": "",
       "binary_path": "cj_launcher.elf",
@@ -150,6 +150,18 @@
       "source": 1,
       "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_storage/cj_storage.json",
       "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_storage/cj_storage.elf"
+    },
+    {
+      "unique_identifier": "cj_usb_msc",
+      "name": "USB Mass Storage",
+      "author": "CJ van Soest",
+      "version": "0.1.0",
+      "interpreter": "",
+      "metadata_file": "",
+      "binary_path": "cj_usb_msc.elf",
+      "source": 1,
+      "metadata_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_usb_msc/cj_usb_msc.json",
+      "download_url": "https://raw.githubusercontent.com/CJvanSoest/why2025-app-repository/main/cj_usb_msc/cj_usb_msc.elf"
     },
     {
       "unique_identifier": "cj_wifi_analyzer",
